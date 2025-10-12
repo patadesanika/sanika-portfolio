@@ -15,8 +15,7 @@ export function About() {
                   <h3 className="text-xl font-semibold mb-4 text-white">Professional Summary</h3>
                   <p className="text-white mb-4">
                     Passionate software developer with 1+ year of experience in building scalable, cloud-native
-                    solutions using AWS, Python, and React. Currently working at YASH Technologies, where I've improved
-                    system efficiency by up to 40%.
+                    solutions using AWS, Python, and React.
                   </p>
                   <p className="text-white mb-4">
                     I specialize in creating responsive web applications, implementing RESTful APIs, and building
@@ -27,6 +26,7 @@ export function About() {
                     <Badge variant="secondary" className="text-black font-semibold">Full-Stack Development</Badge>
                     <Badge variant="secondary" className="text-black font-semibold">Cloud Architecture</Badge>
                     <Badge variant="secondary" className="text-black font-semibold">Real-time Systems</Badge>
+                    <Badge variant="secondary" className="text-black font-semibold">RAG System</Badge>
                   </div>
                 </CardContent>
               </Card>
@@ -59,13 +59,26 @@ export function About() {
 
               <Card className="bg-gray-900 border-gray-700">
                 <CardContent className="p-6">
-                  <h3 className="text-lg font-semibold mb-3 text-white">Achievements</h3>
-                  <ul className="text-sm space-y-2 text-white">
-                    <li>• Improved booking efficiency by 30% with Cabin Management System</li>
-                    <li>• Reduced order processing latency by 35% with microservices</li>
-                    <li>• Built RAG-powered document retrieval system</li>
-                    <li>• Secured 1st rank in Third and Final year of engineering</li>
-                  </ul>
+                  <h3 className="text-lg font-semibold mb-4 text-white">Career Journey</h3>
+                  <div className="relative pl-6">
+                    <div className="absolute left-2 top-0 bottom-0 w-0.5 bg-gray-700" />
+
+                    <div className="mb-6 relative">
+                      <span className="absolute -left-5 top-0 inline-flex items-center justify-center h-8 w-8 rounded-full bg-indigo-600 text-white text-xs font-semibold">2024</span>
+                      <div className="ml-6">
+                        <p className="text-white font-medium mb-1">Trainee Programmer — YASH Technologies</p>
+                        <p className="text-sm text-gray-400">Joined as a trainee, worked on Python and React development.</p>
+                      </div>
+                    </div>
+
+                    <div className="mb-0 relative">
+                      <span className="absolute -left-5 top-0 inline-flex items-center justify-center h-8 w-8 rounded-full bg-green-600 text-white text-xs font-semibold">2025</span>
+                      <div className="ml-6">
+                        <p className="text-white font-medium mb-1">Software Engineer — YASH Technologies</p>
+                        <p className="text-sm text-gray-400">Promoted to Software Engineer, focusing on development and deployment.</p>
+                      </div>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             </div>

@@ -10,7 +10,7 @@ import { Mail, Phone, MapPin, Github, Linkedin } from "lucide-react"
 export function Contact() {
   const [formData, setFormData] = useState({
     name: '',
-    email: 'khushi.patade@gmail.com',
+    email: '',
     subject: '',
     message: ''
   })
@@ -21,11 +21,16 @@ export function Contact() {
   const validateForm = () => {
     const newErrors: {[key: string]: string} = {}
 
-    // Name validation - only letters and spaces
+    // Name validation
     if (!formData.name.trim()) {
       newErrors.name = 'Name is required'
-    } else if (!/^[A-Za-z\s]+$/.test(formData.name.trim())) {
-      newErrors.name = 'Name should only contain letters and spaces'
+    }
+
+    // Email validation
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email is required'
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = 'Please enter a valid email address'
     }
 
     // Subject validation
@@ -55,37 +60,36 @@ export function Contact() {
     setSubmitStatus('idle')
 
     try {
-      // Create email content
-      const emailContent = `
-Name: ${formData.name}
-Email: ${formData.email}
-Subject: ${formData.subject}
-
-Message:
-${formData.message}
-      `.trim()
-
-      // Open default email client with pre-filled content
-      const mailtoLink = `mailto:khushi.patade@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(emailContent)}`
-      
-      window.open(mailtoLink, '_blank')
-      
-      setSubmitStatus('success')
-      
-      // Reset form
-      setFormData({
-        name: '',
-        email: 'khushi.patade@gmail.com',
-        subject: '',
-        message: ''
+      // Send email via API route
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       })
-      
-      // Clear success message after 3 seconds
-      setTimeout(() => {
-        setSubmitStatus('idle')
-      }, 3000)
+
+      if (response.ok) {
+        setSubmitStatus('success')
+        
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
+        })
+        
+        // Clear success message after 5 seconds
+        setTimeout(() => {
+          setSubmitStatus('idle')
+        }, 5000)
+      } else {
+        setSubmitStatus('error')
+      }
       
     } catch (error) {
+      console.error('Email sending failed:', error)
       setSubmitStatus('error')
     } finally {
       setIsSubmitting(false)
@@ -197,16 +201,21 @@ ${formData.message}
                     </div>
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium mb-2 text-white">
-                        Email
+                        Email *
                       </label>
                       <Input 
                         id="email" 
                         type="email" 
                         placeholder="your.email@example.com" 
-                        className="bg-gray-800 border-gray-600 text-gray-400 placeholder-gray-400"
+                        className={`bg-gray-800 border-gray-600 text-white placeholder-gray-400 ${
+                          errors.email ? 'border-red-500' : ''
+                        }`}
                         value={formData.email}
-                        disabled
+                        onChange={(e) => handleInputChange('email', e.target.value)}
                       />
+                      {errors.email && (
+                        <p className="text-red-400 text-sm mt-1">{errors.email}</p>
+                      )}
                     </div>
                   </div>
 
@@ -249,7 +258,7 @@ ${formData.message}
 
                   {submitStatus === 'success' && (
                     <div className="bg-green-900 border border-green-700 text-green-300 px-4 py-3 rounded">
-                      Message sent successfully! Check your email client.
+                      Message sent successfully! I'll get back to you soon.
                     </div>
                   )}
 

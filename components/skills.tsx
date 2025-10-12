@@ -3,11 +3,14 @@ import { Badge } from "@/components/ui/badge"
 
 export function Skills() {
   const technologies = [
-    "React",
     "Python",
+    "LangChain",
     "AWS",
+    "React",
     "FastAPI",
     "Java",
+    "milvus vectorDB",
+    "Neo4j GraphDB",
     "MySQL",
     "DynamoDB",
     "Apache Kafka",
@@ -18,12 +21,10 @@ export function Skills() {
     "WebSocket API",
     "Raspberry Pi",
     "IoT",
-    "Spring Boot",
     "NATS JetStream",
     "OpenSearch",
     "CI/CD Pipeline",
     "HTML/CSS",
-    "JavaScript",
     "RESTful APIs",
     "Serverless",
     "Vector DB",

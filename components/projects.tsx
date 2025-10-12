@@ -8,6 +8,22 @@ import { ExternalLink, Github, Code2 } from "lucide-react"
 export function Projects() {
   const professionalProjects = [
     {
+      title: "RAG System for YASH Technologies",
+      description:
+        "Built an intelligent Retrieval-Augmented Generation system enabling employees to ask questions and retrieve accurate information from company knowledge base using advanced NLP and vector search capabilities.",
+      technologies: [
+        "Python",
+        "LangChain",
+        "Milvus VectorDB",
+        "OpenAI GPT",
+        "FastAPI",
+        "Docker",
+        "Embeddings",
+      ],
+      impact: "Reduced employee time to find policy information by 80% and improved knowledge accessibility with instant Q&A capabilities",
+      image: "/rag.png",
+    },
+    {
       title: "Real-Time Stock Data Processing System",
       description:
         "Designed and deployed a scalable AWS-based architecture to process stock data from BSE APIs with real-time delivery and analytics.",
@@ -35,8 +51,8 @@ export function Projects() {
     {
       title: "Real-Time Order Processing System",
       description:
-        "Microservice using Spring Boot and NATS JetStream to consume and process orders with inventory management and dead-letter queues.",
-      technologies: ["Java 21", "Spring Boot", "NATS JetStream", "MySQL"],
+        "Microservice using Python and NATS JetStream to consume and process orders with inventory management and dead-letter queues.",
+      technologies: ["Python", "NATS JetStream", "MySQL"],
       impact: "Reduced order processing latency by 35% and improved system reliability",
       image: "/order-processing-dashboard.png",
     },

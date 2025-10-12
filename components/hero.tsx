@@ -8,8 +8,8 @@ export function Hero() {
   const handleDownloadResume = () => {
     // Create a link element
     const link = document.createElement('a')
-    link.href = '/SanikaPatade_1YOE_Resume.pdf'
-    link.download = 'SanikaPatade_1YOE_Resume.pdf'
+    link.href = '/SanikaPatade_SoftwareEngineer_Resume.pdf'
+    link.download = 'SanikaPatade_SoftwareEngineer_Resume.pdf'
     link.target = '_blank'
     
     // Append to body, click, and remove

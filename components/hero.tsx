@@ -76,14 +76,12 @@ export function Hero() {
               Get In Touch
             </Button>
             <Button
-              asChild
               size="lg"
               className="w-full sm:w-auto bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 transform hover:scale-105 transition-all duration-300 shadow-lg text-white font-semibold"
+              onClick={() => window.open('/SanikaPatade_SoftwareEngineer_Resume.pdf', '_blank')}
             >
-              <a href="/SanikaPatade_SoftwareEngineer_Resume.pdf" download="SanikaPatade_SoftwareEngineer_Resume.pdf">
-                <Download className="mr-2 h-4 w-4" />
-                Download Resume
-              </a>
+              <Download className="mr-2 h-4 w-4" />
+              Download Resume
             </Button>
           </div>
 

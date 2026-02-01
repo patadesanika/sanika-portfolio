@@ -66,7 +66,7 @@ export function Hero() {
             <p className="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto">
               Passionate Software Developer specializing in <span className="text-blue-400 font-semibold">Python</span>,
               <span className="text-cyan-400 font-semibold"> React</span>, 
-              <span className="text-purple-400 font-semibold"> RAG System</span>, and
+              <span className="text-blue-400 font-semibold"> RAG System</span>, and
               <span className="text-pink-400 font-semibold"> AWS Cloud Solutions</span>
             </p>
           </div>

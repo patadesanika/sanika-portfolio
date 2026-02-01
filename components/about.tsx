@@ -31,7 +31,7 @@ export function About() {
         <div className="absolute bottom-20 right-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-pink-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>
       </div>
-      
+
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto">
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
@@ -40,8 +40,8 @@ export function About() {
 
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className={`transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-            <Card className="bg-gradient-to-br from-blue-900/60 to-purple-900/60 border-blue-500/30 backdrop-blur-sm hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300">
-              <CardContent className="p-8 min-h-96">
+              <Card className="bg-gradient-to-br from-blue-900/60 to-purple-900/60 border-blue-500/30 backdrop-blur-sm hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300">
+                <CardContent className="p-8 min-h-96">
                   <h3 className="text-xl font-semibold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Professional Summary</h3>
                   <p className="text-gray-200 mb-4 leading-relaxed">
                     Passionate software developer with 1.5+ years of experience in building scalable, cloud-native
@@ -57,7 +57,7 @@ export function About() {
                     <Badge variant="secondary" className="text-black font-semibold bg-gradient-to-r from-purple-400 to-pink-400 hover:from-purple-500 hover:to-pink-500 transition-all duration-300">Cloud Architecture</Badge>
                     <Badge variant="secondary" className="text-black font-semibold bg-gradient-to-r from-green-400 to-blue-400 hover:from-green-500 hover:to-blue-500 transition-all duration-300">Real-time Systems</Badge>
                     <Badge variant="secondary" className="text-black font-semibold bg-gradient-to-r from-yellow-400 to-orange-400 hover:from-yellow-500 hover:to-orange-500 transition-all duration-300">Event Driven Systems</Badge>
-                    <Badge variant="secondary" className="text-black font-semibold bg-gradient-to-r from-pink-400 to-purple-400 hover:from-pink-500 hover:to-purple-500 transition-all duration-300">RAG System</Badge>
+                    <Badge variant="secondary" className="text-black font-semibold bg-gradient-to-r from-blue-400 to-cyan-400 hover:from-blue-500 hover:to-cyan-500 transition-all duration-300">RAG System</Badge>
                   </div>
                 </CardContent>
               </Card>

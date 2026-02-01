@@ -12,18 +12,6 @@ export function Hero() {
     setIsVisible(true)
   }, [])
 
-  const handleDownloadResume = () => {
-    // Create a link element
-    const link = document.createElement('a')
-    link.href = '/SanikaPatade_SoftwareEngineer_Resume.pdf'
-    link.download = 'SanikaPatade_SoftwareEngineer_Resume.pdf'
-    link.target = '_blank'
-    
-    // Append to body, click, and remove
-    document.body.appendChild(link)
-    link.click()
-    document.body.removeChild(link)
-  }
 
   return (
     <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-pink-900/20 relative overflow-hidden">
@@ -65,7 +53,7 @@ export function Hero() {
           <div className={`transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <p className="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto">
               Passionate Software Developer specializing in <span className="text-blue-400 font-semibold">Python</span>,
-              <span className="text-cyan-400 font-semibold"> React</span>, 
+              <span className="text-cyan-400 font-semibold"> React</span>,
               <span className="text-blue-400 font-semibold"> RAG System</span>, and
               <span className="text-pink-400 font-semibold"> AWS Cloud Solutions</span>
             </p>
@@ -79,21 +67,23 @@ export function Hero() {
           </div>
 
           <div className={`flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 transition-all duration-1000 delay-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               className="w-full sm:w-auto bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 transform hover:scale-105 transition-all duration-300 shadow-lg"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               <Mail className="mr-2 h-4 w-4" />
               Get In Touch
             </Button>
-            <Button 
-              size="lg" 
+            <Button
+              asChild
+              size="lg"
               className="w-full sm:w-auto bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 transform hover:scale-105 transition-all duration-300 shadow-lg text-white font-semibold"
-              onClick={handleDownloadResume}
             >
-              <Download className="mr-2 h-4 w-4" />
-              Download Resume
+              <a href="/SanikaPatade_SoftwareEngineer_Resume.pdf" download="SanikaPatade_SoftwareEngineer_Resume.pdf">
+                <Download className="mr-2 h-4 w-4" />
+                Download Resume
+              </a>
             </Button>
           </div>
 

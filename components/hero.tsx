@@ -40,7 +40,7 @@ export function Hero() {
           <div className={`transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <Badge variant="secondary" className="mb-4 text-black font-semibold bg-gradient-to-r from-yellow-400 to-orange-400 hover:from-yellow-500 hover:to-orange-500 transition-all duration-300">
               <Zap className="mr-2 h-4 w-4" />
-              AWS Certified Developer Associate
+              2X AWS Certified (Solution Architect-Associate & Developer Associate)
             </Badge>
           </div>
 
@@ -61,7 +61,7 @@ export function Hero() {
 
           <div className={`transition-all duration-1000 delay-800 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-              Building scalable, cloud-native solutions with 1.5+ year of experience in full-stack development and real-time
+              Building scalable, cloud-native solutions with 1.7+ year of experience in full-stack development and real-time
               data processing systems.
             </p>
           </div>

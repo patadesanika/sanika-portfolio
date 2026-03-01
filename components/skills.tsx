@@ -50,6 +50,7 @@ export function Skills() {
     "Serverless",
     "Postman",
     "GitHub",
+    "OpenTelemetry",
     "Grafana",
     "QuickSight",
     "Athena",

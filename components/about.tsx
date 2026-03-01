@@ -44,7 +44,7 @@ export function About() {
                 <CardContent className="p-8 min-h-96">
                   <h3 className="text-xl font-semibold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Professional Summary</h3>
                   <p className="text-gray-200 mb-4 leading-relaxed">
-                    Passionate software developer with 1.5+ years of experience in building scalable, cloud-native
+                    Passionate software developer with 1.7+ years of experience in building scalable, cloud-native
                     solutions using AWS, Python, and React.
                   </p>
                   <p className="text-gray-200 mb-6 leading-relaxed">
@@ -74,7 +74,7 @@ export function About() {
                     </div>
                     <div className="flex justify-between items-center bg-pink-500/10 p-2 rounded-lg border border-pink-500/20">
                       <span className="text-pink-300 font-medium">Experience:</span>
-                      <span className="text-white font-semibold">1.5+ Years</span>
+                      <span className="text-white font-semibold">1.7+ Years</span>
                     </div>
                     <div className="flex justify-between items-center bg-blue-500/10 p-2 rounded-lg border border-blue-500/20">
                       <span className="text-blue-300 font-medium">Education:</span>

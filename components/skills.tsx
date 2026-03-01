@@ -50,7 +50,7 @@ export function Skills() {
     "Serverless",
     "Postman",
     "GitHub",
-    "OPIK-LLM trace tool",
+    "Grafana",
     "QuickSight",
     "Athena",
     "SQLite",

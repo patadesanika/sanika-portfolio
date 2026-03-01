@@ -29,6 +29,11 @@ export function Education() {
 
   const certifications = [
     {
+      name: "AWS Certified Solution Architect – Associate (SAA-C03)",
+      issuer: "Amazon Web Services",
+      icon: <Award className="h-6 w-6" />,
+    },
+    {
       name: "AWS Certified Developer – Associate (DVA-C02)",
       issuer: "Amazon Web Services",
       icon: <Award className="h-6 w-6" />,

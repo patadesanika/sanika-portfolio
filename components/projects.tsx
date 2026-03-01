@@ -8,6 +8,23 @@ import { ExternalLink, Github, Code2 } from "lucide-react"
 export function Projects() {
   const professionalProjects = [
     {
+      title: "YASH NEXT GEN INTELLIGENT AGENT (NIA) — Platform Engineering",
+      description:
+        "Owned the end-to-end deployment pipeline for AI agents onto AWS Lambda by designing and containerizing agents using custom Dockerfiles optimized for Lambda runtime. Implemented OpenTelemetry (OTel) instrumentation for distributed tracing across agentic workflows, enabling full observability into agent execution, latency, and failure points. Resolved AWS Lambda cold start issues through targeted optimizations and integrated OTel traces with Grafana dashboards for real-time monitoring. Validated end-to-end developer-side flows post-deployment, ensuring agents functioned correctly within the agentic platform and met quality standards before client-facing release.",
+      technologies: [
+        "Python",
+        "Docker",
+        "AWS Lambda",
+        "OpenTelemetry",
+        "Grafana",
+        "CI/CD",
+        "Serverless",
+        "Observability",
+      ],
+      impact: "Enabled rapid, reliable deployment of AI agents at scale on serverless infrastructure, reduced observability gaps through end-to-end tracing, and improved platform stability by eliminating cold start bottlenecks",
+      image: "/NIA.png",
+    },
+    {
       title: "Enterprise License Provisioning System",
       description:
         "Designed and implemented a license system for agents pipeline in Python, integrating organization and plan selection (Starter, Growth, Enterprise) with agent allocation, cloud provider/region configuration, and validity periods.ensure licnese expiry at selected time. Embedded license metadata with agent repositories, applied PyArmor-based obfuscation for secure delivery, and automated client deployment workflows using CI/CD pipelines.",

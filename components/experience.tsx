@@ -3,7 +3,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Calendar, MapPin, Github, Code2, Briefcase, Award } from "lucide-react"
+import { Calendar, MapPin, Briefcase, Award } from "lucide-react"
 import { useEffect, useState } from "react"
 
 export function Experience() {
@@ -32,7 +32,8 @@ export function Experience() {
       period: "August 2024 - Present",
       type: "Full-time",
       achievements: [
-        "AWS Certified Developer with 1.5+ years of experience in designing & developing cloud-native applications and enterprise platforms using Python, FastAPI, and React with AWS services",
+        "AWS Certified Developer with 1.7+ years of experience in designing & developing cloud-native applications and enterprise platforms using Python, FastAPI, and React with AWS services",
+        "Working on YASH Product(NIA) as Platform supporting enterprise-grade AI agents, deployed securely across client environments.", 
         "Proficient in building scalable solutions using AWS ECS, Lambda, RDS, DynamoDB, API Gateway,Bedrock, and Athena for enterprise-level applications",
         "Experienced in real-time data processing with Kafka, NATS JetStream, OpenSearch, and WebSocket for handling large bundles of messages/day",
         "Strong expertise in developing RAG (Retrieval-Augmented Generation) systems for semantic search and AI-driven solutions",
@@ -43,24 +44,6 @@ export function Experience() {
         "Worked with agile model of software development methodology"
       ],
       technologies: ["React", "Python", "FastAPI", "SQL", "CI/CD", "Vector DB"],
-    },
-  ]
-
-  const internships = [
-    {
-      title: "Core Java Developer",
-      company: "FUEL",
-      period: "Jan 2023 - Feb 2023",
-      description: "Developed Java-based applications, focusing on object-oriented programming.",
-      githubUrl: "https://github.com/patadesanika/JAVA_Coding",
-    },
-    {
-      title: "Data Science Intern",
-      company: "CODE CLAUSE & OASIS INFOBYTE",
-      period: "Feb 2023 - Mar 2023",
-      description: "Analyzed datasets and built predictive models using Python.",
-      githubUrl: "https://github.com/patadesanika/code_clause",
-      oibsipUrl: "https://github.com/patadesanika/OIBSIP",
     },
   ]
 
@@ -146,52 +129,6 @@ export function Experience() {
                 </Card>
               </div>
             ))}
-          </div>
-
-          <div className="mt-12">
-            <h3 className="text-2xl font-bold mb-6 bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">Internships</h3>
-            <div className="grid md:grid-cols-2 gap-6">
-              {internships.map((internship, index) => (
-                <Card key={index} className="bg-gradient-to-br from-green-900/60 to-cyan-900/60 border-green-500/30">
-                  <CardHeader>
-                    <CardTitle className="text-lg bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">{internship.title}</CardTitle>
-                    <p className="bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent font-semibold">{internship.company}</p>
-                    <div className="flex items-center text-sm text-gray-300">
-                      <Calendar className="mr-1 h-4 w-4" />
-                      {internship.period}
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="space-y-4">
-                      <p className="text-gray-200">{internship.description}</p>
-                      
-                      <div className="flex gap-2 pt-2">
-                        {internship.githubUrl && (
-                          <Button 
-                            size="sm" 
-                            className="text-white border-0 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 hover:scale-110 transform transition-all duration-300 shadow-md"
-                            onClick={() => window.open(internship.githubUrl, '_blank')}
-                          >
-                            <Github className="mr-2 h-4 w-4" />
-                            {internship.title === "Core Java Developer" ? "FUEL" : "Code Clause"}
-                          </Button>
-                        )}
-                        {internship.oibsipUrl && (
-                          <Button 
-                            size="sm" 
-                            className="text-white border-0 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 hover:scale-110 transform transition-all duration-300 shadow-md"
-                            onClick={() => window.open(internship.oibsipUrl, '_blank')}
-                          >
-                            <Github className="mr-2 h-4 w-4" />
-                            OIBSIP
-                          </Button>
-                        )}
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
           </div>
         </div>
       </div>
